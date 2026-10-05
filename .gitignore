@@ -1,0 +1,13 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+.env*
+!.env.example
+.sites-runtime/
+qa-output/
+out-*/
+.netlify/
+.openai/
+.DS_Store
+docs/backups/
