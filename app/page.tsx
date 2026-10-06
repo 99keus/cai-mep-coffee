@@ -12,6 +12,7 @@ import {
   ShoppingBag,
 } from "lucide-react";
 import { WhyMotion } from "@/components/WhyMotion";
+import { FeaturedMotion } from "@/components/FeaturedMotion";
 import { Hero } from "@/components/Hero";
 import { CTASection } from "@/components/CTASection";
 import { ProductGrid } from "@/components/ProductGrid";
@@ -86,6 +87,7 @@ export default function Home() {
         </div>
         </WhyMotion>
       </section>
+      <FeaturedMotion>
       <section className="featured-section section">
         <div className="container">
           <div className="section-heading">
@@ -103,6 +105,7 @@ export default function Home() {
           </p>
         </div>
       </section>
+      </FeaturedMotion>
       <section className="origins-section section">
         <div className="container">
           <div className="section-heading">
@@ -121,7 +124,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="section container">
+{/*       <section className="section container">
         <div className="section-heading">
           <div>
             <p className="eyebrow">EXPORT & PACKAGING</p>
@@ -165,7 +168,7 @@ export default function Home() {
           Packaging options, net weights, order quantities and export
           documentation are confirmed with your quotation.
         </p>
-      </section>
+      </section> */}
       <CTASection />
     </>
   );

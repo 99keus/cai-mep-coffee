@@ -3,10 +3,13 @@ import { HeroShowcase } from "@/components/HeroShowcase";
 
 export function Hero() {
   return (
-    <section className="hero hero-category-showcase">
+    <div className="hero-transition">
       <HeroMotion />
       <div className="hero-photo" role="img" aria-label="Illustrative coffee-growing highlands" />
-      <HeroShowcase />
-    </section>
+      <section className="hero hero-category-showcase">
+        <HeroShowcase />
+      </section>
+      <div className="hero-gradient-bridge" aria-hidden="true" />
+    </div>
   );
 }

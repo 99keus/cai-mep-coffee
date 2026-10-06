@@ -6,7 +6,7 @@ export function HeroMotion() {
   const marker = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    const hero = marker.current?.closest<HTMLElement>(".hero");
+    const hero = marker.current?.closest<HTMLElement>(".hero-transition");
     if (!hero) return;
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     let frame = 0;
@@ -14,9 +14,9 @@ export function HeroMotion() {
       frame = 0;
       if (!hero) return;
       const bounds = hero.getBoundingClientRect();
-      const progress = preference.matches ? 0 : Math.max(0, Math.min(1, -bounds.top / bounds.height));
-      hero.style.setProperty("--hero-parallax", `${(progress * bounds.height * .3).toFixed(2)}px`);
-      hero.style.setProperty("--hero-photo-opacity", `${1 - progress}`);
+      const contentHeight = hero.querySelector<HTMLElement>(".hero")?.offsetHeight ?? bounds.height;
+      const progress = preference.matches ? 0 : Math.max(0, Math.min(1, -bounds.top / contentHeight));
+      hero.style.setProperty("--hero-parallax", `${(progress * contentHeight * .5).toFixed(2)}px`);
       hero.style.setProperty("--hero-blur", `${(progress * 12).toFixed(2)}px`);
     }
     function schedule() {

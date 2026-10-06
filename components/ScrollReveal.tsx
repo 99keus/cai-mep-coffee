@@ -35,6 +35,7 @@ export function ScrollReveal() {
 
       document.querySelectorAll<HTMLElement>("main section:not([role='tabpanel']), main .product-detail-layout").forEach(section => {
         // Keep the initial viewport stable; reveal each later section once.
+        if (section.closest(".featured-frame") || section.matches(".why-section")) return;
         if (section.getBoundingClientRect().top < window.innerHeight) return;
         observer?.observe(section);
       });
