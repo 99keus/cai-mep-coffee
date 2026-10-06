@@ -105,7 +105,7 @@ export function Header() {
         <BrandLogo priority animated />
       </Link>
       <nav className="desktop-nav" aria-label="Main navigation">{navigation("desktop")}</nav>
-      <Link className="button header-quote" href="/contact" onClick={close}>Request a Quote <ArrowUpRight size={17} /></Link>
+      <Link className="button header-quote" href="/contact" onClick={close}><span className="header-quote-label">Request a Quote</span> <ArrowUpRight size={17} /></Link>
       <button className="menu-toggle" onClick={() => { setOpen(!open); setExpanded(null); }} aria-expanded={open} aria-controls="mobile-nav" aria-label={open ? "Close menu" : "Open menu"}>{open ? <X /> : <Menu />}</button>
     </div>
     {open && <nav id="mobile-nav" className="mobile-nav" aria-label="Mobile navigation">{navigation("mobile")}<Link href="/contact" onClick={close}>Request a Quote ↗</Link></nav>}

@@ -49,10 +49,14 @@ export function WhyMotion({ children }: { children: ReactNode }) {
       frame = 0;
       if (!element) return;
       const top = element.getBoundingClientRect().top;
-      const progress = Math.max(0, Math.min(1, (window.innerHeight - top) / (window.innerHeight * .8)));
-      element.style.setProperty("--why-photo-scale", preference.matches ? "1" : `${.7 + progress * .3}`);
       const photo = element.querySelector(".why-photo-stage");
       const photoTop = photo?.getBoundingClientRect().top ?? top;
+      const progress = Math.max(0, Math.min(1, (window.innerHeight - photoTop) / (window.innerHeight * .8)));
+      element.style.setProperty("--why-photo-scale", preference.matches ? "1" : `${.7 + progress * .3}`);
+      const startWidth = Math.min(640, window.innerWidth - 40);
+      const expansion = preference.matches ? 1 : progress;
+      element.style.setProperty("--why-photo-width", `${startWidth + (window.innerWidth - startWidth) * expansion}px`);
+      element.style.setProperty("--why-photo-radius", `${24 * (1 - expansion)}px`);
       const glowProgress = Math.max(0, Math.min(1, (window.innerHeight - photoTop) / window.innerHeight));
       element.style.setProperty("--why-glow-scale", preference.matches ? "1" : `${.4 + glowProgress * 1.1}`);
       const sectionTop = section?.getBoundingClientRect().top ?? top;
@@ -75,6 +79,8 @@ export function WhyMotion({ children }: { children: ReactNode }) {
       window.removeEventListener("resize", schedule);
       preference.removeEventListener("change", schedule);
       element.style.removeProperty("--why-photo-scale");
+      element.style.removeProperty("--why-photo-width");
+      element.style.removeProperty("--why-photo-radius");
       element.style.removeProperty("--why-glow-scale");
       section?.style.removeProperty("--why-gradient-offset");
     };

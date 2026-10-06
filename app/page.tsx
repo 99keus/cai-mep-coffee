@@ -25,17 +25,7 @@ export default function Home() {
       <Hero />
       <section className="why-section">
         <WhyMotion>
-        <div className="why-photo-stage">
-        <div className="why-photo why-photo-harvest">
-          <Image
-            loading="lazy"
-            src="/images/company/coffee-cherry-harvest-20261004.webp"
-            alt="Hands gathering ripe coffee cherries into a woven harvest basket"
-            fill
-            sizes="(max-width:760px) 90vw,50vw"
-          />
-        </div>
-        </div>
+        <div className="why-introduction">
         <h2 className="why-statement" aria-label="Rooted in Vietnam. Ready to grow with you.">
           {"Rooted in Vietnam. Ready to grow with you.".split(" ").map((word, index) => (
             <span className="why-title-piece" aria-hidden="true" key={index}>
@@ -48,6 +38,22 @@ export default function Home() {
             </span>
           ))}
         </h2>
+        </div>
+        </WhyMotion>
+      </section>
+      <section className="why-section why-story-section">
+        <WhyMotion>
+        <div className="why-photo-stage">
+        <div className="why-photo why-photo-harvest">
+          <Image
+            loading="lazy"
+            src="/images/company/coffee-cherry-harvest-20261004.webp"
+            alt="Hands gathering ripe coffee cherries into a woven harvest basket"
+            fill
+            sizes="100vw"
+          />
+        </div>
+        </div>
         <div>
           <p className="why-lead">
             Our supply network spans Vietnam’s key coffee regions, enabling stable sourcing and scalable shipment planning for importers, roasters, and private label partners. From a few lots to a full container, we help you shape a coffee programme that grows with your business.
