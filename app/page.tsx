@@ -11,9 +11,9 @@ import {
   Box,
   ShoppingBag,
 } from "lucide-react";
+import { WhyMotion } from "@/components/WhyMotion";
 import { Hero } from "@/components/Hero";
 import { CTASection } from "@/components/CTASection";
-import { CategoryCard } from "@/components/CategoryCard";
 import { ProductGrid } from "@/components/ProductGrid";
 import { OriginCard } from "@/components/OriginCard";
 import { featuredProducts } from "@/data/products";
@@ -22,75 +22,32 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <section className="section container">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">OUR COFFEE PORTFOLIO</p>
-            <h2>
-              The right coffee.
-              <br />
-              For your next chapter.
-            </h2>
-          </div>
-        </div>
-        <div className="category-grid">
-          <CategoryCard
-            index={1}
-            name="Green Coffee Beans"
-            image="/images/products/catalogue-20261003/arabica-catimor-washed.webp"
-            description="Robusta, Arabica & Excelsa"
-          />
-          <CategoryCard
-            index={2}
-            name="Roasted Coffee Beans"
-            image="/images/products/catalogue-20261003/roasted-coffee-blend.webp"
-            description="Whole beans. Share your roast requirements."
-          />
-          <CategoryCard
-            index={3}
-            name="Ground Coffee"
-            image="/images/products/catalogue-20261003/ground-coffee-blend.webp"
-            description="Coffee prepared for your brewing needs."
-          />
-        </div>
-      </section>
-      <section className="featured-section section">
-        <div className="container">
-          <div className="section-heading">
-            <div>
-              <h2 className="eyebrow feature-products-title">FEATURE PRODUCTS</h2>
-            </div>
-            <Link className="text-link" href="/products">
-              View all products <ArrowUpRight size={18} />
-            </Link>
-          </div>
-          <ProductGrid products={featuredProducts} />
-          <p className="image-disclaimer">
-            Illustrative photography. Product specifications and availability
-            are confirmed per lot.
-          </p>
-        </div>
-      </section>
-      <section className="section container why-grid">
+      <section className="why-section">
+        <WhyMotion>
+        <div className="why-photo-stage">
         <div className="why-photo why-photo-harvest">
           <Image
+            loading="lazy"
             src="/images/company/coffee-cherry-harvest-20261004.webp"
             alt="Hands gathering ripe coffee cherries into a woven harvest basket"
             fill
             sizes="(max-width:760px) 90vw,50vw"
           />
-          <span>
-            Rooted in Vietnam.
-            <br />
-            Shared with the world.
-          </span>
         </div>
+        </div>
+        <h2 className="why-statement" aria-label="Rooted in Vietnam. Ready to grow with you.">
+          {"Rooted in Vietnam. Ready to grow with you.".split(" ").map((word, index) => (
+            <span className="why-title-piece" aria-hidden="true" key={index}>
+              <span className="why-word"><span className="why-word-inner">{word}</span></span>
+              {(index === 2 || index === 5) && (
+                <span className="why-word why-title-image"><span className="why-word-inner">
+                  <Image src={index === 2 ? "/images/company/vietnam-flag.svg" : "/images/company/cai-mep-logo-symbol.svg"} alt="" width={150} height={90} className={index === 2 ? "why-title-flag" : "why-title-mark"} />
+                </span></span>
+              )}
+            </span>
+          ))}
+        </h2>
         <div>
-          <p className="eyebrow">WHY CAI MEP COFFEE</p>
-          <h2>
-            Rooted in Vietnam.
-            <br />Ready to grow with you.
-          </h2>
           <p className="why-lead">
             Our supply network spans Vietnam’s key coffee regions, enabling stable sourcing and scalable shipment planning for importers, roasters, and private label partners. From a few lots to a full container, we help you shape a coffee programme that grows with your business.
           </p>
@@ -126,9 +83,24 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <Link className="text-link" href="/coffee-origins">
-            Discover our coffee origins <ArrowUpRight size={18} />
-          </Link>
+        </div>
+        </WhyMotion>
+      </section>
+      <section className="featured-section section">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <h2 className="eyebrow feature-products-title">FEATURE PRODUCTS</h2>
+            </div>
+            <Link className="text-link" href="/products">
+              View all products <ArrowUpRight size={18} />
+            </Link>
+          </div>
+          <ProductGrid products={featuredProducts} />
+          <p className="image-disclaimer">
+            Illustrative photography. Product specifications and availability
+            are confirmed per lot.
+          </p>
         </div>
       </section>
       <section className="origins-section section">

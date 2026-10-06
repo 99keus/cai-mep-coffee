@@ -26,26 +26,8 @@ export function OriginScroll({ children }: { children: ReactNode }) {
         anchors: { offset: -100 },
       });
       const sections = Array.from(element.querySelectorAll<HTMLElement>(".origin-landscape"));
-      const animations: Animation[] = [];
       let frame = 0;
       element.dataset.motion = "enabled";
-
-      const observer = new IntersectionObserver(entries => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting) continue;
-          const content = entry.target.querySelector(".origin-landscape-copy");
-          if (content) {
-            Array.from(content.children).forEach((child, index) => {
-              animations.push(child.animate([
-                { opacity: 0, transform: "translateY(24px)" },
-                { opacity: 1, transform: "translateY(0)" },
-              ], { duration: 800, delay: index * 85, easing: "cubic-bezier(.22,1,.36,1)", fill: "backwards" }));
-            });
-          }
-          observer.unobserve(entry.target);
-        }
-      }, { threshold: 0.12 });
-      sections.forEach(section => observer.observe(section));
 
       function paint() {
         frame = 0;
@@ -66,8 +48,6 @@ export function OriginScroll({ children }: { children: ReactNode }) {
 
       dispose = () => {
         lenis.destroy();
-        observer.disconnect();
-        animations.forEach(animation => animation.cancel());
         cancelAnimationFrame(frame);
         window.removeEventListener("scroll", schedule);
         window.removeEventListener("resize", schedule);

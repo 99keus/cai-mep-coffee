@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Header } from "@/components/Header";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { Footer } from "@/components/Footer";
 import { company } from "@/data/company";
 import "./globals.css";
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   },
   description:
     "Explore Vietnamese green coffee beans, roasted coffee and ground coffee for international roasters, importers and distributors. Request a tailored quotation.",
-  icons: { icon: company.logo, apple: company.logo },
+  icons: { icon: "/images/company/cai-mep-logo-symbol.svg", apple: "/images/company/cai-mep-logo-symbol.svg" },
   ...(company.siteUrl ? { metadataBase: new URL(company.siteUrl) } : {}),
 };
 export default function RootLayout({
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <ScrollReveal />
       </body>
     </html>
   );

@@ -19,7 +19,7 @@ export default function CoffeeOrigins() {
           const species = origin.species.includes("Arabica") ? "Arabica" : "Robusta";
           return (
             <section id={origin.slug} key={origin.slug} className="origin-landscape" aria-labelledby={`${origin.slug}-title`}>
-              <Image src={origin.image} alt={origin.imageAlt} fill preload={index === 0} sizes="100vw" className="origin-landscape-image" />
+              <Image src={origin.image} alt={origin.imageAlt} fill loading={index === 0 ? "eager" : "lazy"} sizes="100vw" className="origin-landscape-image" />
               <div className="origin-landscape-shade" aria-hidden="true" />
               <div className="origin-landscape-inner">
                 <div className="origin-landscape-copy">

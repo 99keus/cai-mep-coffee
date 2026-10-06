@@ -70,6 +70,7 @@ export default function About() {
               src="/images/company/vietnam-coffee-farmer.jpg"
               alt="A Vietnamese coffee farmer holding a branch of white coffee blossoms in a plantation"
               fill
+              loading="lazy"
               sizes="(max-width: 760px) 100vw, 50vw"
             />
           </div>
@@ -104,6 +105,7 @@ export default function About() {
               src="/images/company/coffee-pruning-vietnam.jpg"
               alt="A grower pruning a Robusta coffee branch by hand after harvest in Vietnam"
               fill
+              loading="lazy"
               sizes="(max-width: 760px) 100vw, 50vw"
             />
           </div>

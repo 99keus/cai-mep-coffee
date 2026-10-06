@@ -16,14 +16,12 @@ const productLinks = [
   { label: "Ground Coffee", href: "/products?category=Ground%20Coffee" },
 ];
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About us" },
-  { href: "/products", label: "Products", children: productLinks },
-  { href: "/coffee-origins", label: "Coffee origins", children: [
+  { href: "/about", label: "About" },
+  { href: "/products", label: "Product", children: productLinks },
+  { href: "/coffee-origins", label: "Origin", children: [
     { label: "Explore all origins", href: "/coffee-origins" },
     ...origins.map(o => ({ label: o.name, href: `/coffee-origins#${o.slug}` })),
   ] },
-  { href: "/contact", label: "Contact" },
 ];
 export function Header() {
   const pathname = usePathname();
@@ -38,6 +36,32 @@ export function Header() {
     document.addEventListener("pointerdown", outside);
     return () => document.removeEventListener("pointerdown", outside);
   }, []);
+  useEffect(() => {
+    const element = header.current;
+    if (!element) return;
+    let frame = 0;
+    function update() {
+      frame = 0;
+      if (!element) return;
+      const current = Math.max(0, window.scrollY);
+      // Keep the home navigation transparent through the full 768px hero.
+      element.dataset.scrolled = String(current > (pathname === "/" ? 768 : 24));
+
+
+    }
+    function onScroll() {
+      if (!frame) frame = requestAnimationFrame(update);
+    }
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      cancelAnimationFrame(frame);
+    };
+  }, [pathname]);
+
   function navigation(mode: "desktop" | "mobile") {
     return links.map(item => {
       const id = `${mode}-${item.label.replaceAll(" ", "-").toLowerCase()}`;
@@ -73,12 +97,12 @@ export function Header() {
       </div>;
     });
   }
-  return <header className="site-header" ref={header} onKeyDown={e => {
+  return <header className={`site-header${pathname === "/" ? " header-home" : ""}${open || expanded ? " header-open" : ""}`} ref={header} onKeyDown={e => {
     if (e.key === "Escape") { close(); header.current?.querySelector<HTMLButtonElement>(".menu-toggle")?.focus(); }
   }}>
     <div className="container header-inner">
       <Link className="brand" href="/" aria-label={`${company.name} home`} onClick={close}>
-        <BrandLogo priority />
+        <BrandLogo priority animated />
       </Link>
       <nav className="desktop-nav" aria-label="Main navigation">{navigation("desktop")}</nav>
       <Link className="button header-quote" href="/contact" onClick={close}>Request a Quote <ArrowUpRight size={17} /></Link>

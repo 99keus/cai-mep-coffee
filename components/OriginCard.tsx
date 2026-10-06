@@ -17,6 +17,7 @@ export function OriginCard({
       </div>
       <div className="origin-card-image">
         <Image
+          loading="lazy"
           src={origin.image}
           alt={origin.imageAlt}
           fill

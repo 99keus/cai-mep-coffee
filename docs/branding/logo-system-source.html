@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cai Mep Coffee – Logo system</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#fff;--fg:#3f2518;--muted:#7a6a60;--line:#e8e2da;
+--brown:#3f2518;--forest:#1f3d2f;--cream:#efe4d0;--copper:#b87333}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15110e;--fg:#efe4d0;--muted:#a89a8e;--line:#2e2620}}
+:root[data-theme="dark"]{--bg:#15110e;--fg:#efe4d0;--muted:#a89a8e;--line:#2e2620}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Barlow Semi Condensed",system-ui,sans-serif;padding:28px 18px 56px}
+main{max-width:1040px;margin:0 auto}
+h1{font-size:1.4rem;font-weight:600;letter-spacing:.02em;margin:0 0 4px}
+p.note{margin:0 0 20px;color:var(--muted);line-height:1.5;max-width:66ch}
+.panel{background:#fff;color:var(--brown);border:1px solid var(--line);border-radius:4px;display:flex;align-items:center;justify-content:center;
+--ring:#1f3d2f;--lens:#3f2518;--gap:#fff;--lat:#b87333}
+.hero{min-height:380px;padding:56px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px;margin-top:12px}
+.sm{min-height:250px;padding:28px 14px}
+.cream{background:#efe4d0;--gap:#efe4d0}
+.rev{background:#1f3d2f;color:#efe4d0;--ring:#efe4d0;--lens:#efe4d0;--gap:#1f3d2f;--lat:#d9955a}
+.mono{--ring:#3f2518;--lens:#3f2518;--lat:#3f2518}
+svg.mk{display:block;flex:none;aspect-ratio:1}
+.wm{display:inline-block}
+.wm b{display:block;font-weight:600;line-height:.9;letter-spacing:.07em;margin-right:-.07em}
+.sp{display:flex;justify-content:space-between;font-weight:500;line-height:1;margin-top:.5em}
+.sp i{font-style:normal}
+.coffee{color:var(--ring)}
+.rev .coffee{color:#d9955a}
+.mono .coffee{color:inherit}
+.hz{display:flex;align-items:center;gap:clamp(16px,3.5vw,34px)}
+.hz .mk{height:clamp(76px,16vw,136px)}
+.hz b{font-size:clamp(46px,10.5vw,92px)}
+.hz .sp{font-size:clamp(14px,3.1vw,27px)}
+.st{display:flex;flex-direction:column;align-items:center;gap:16px}
+.st .mk{height:92px}
+.st b{font-size:44px}.st .sp{font-size:15px}
+.sym .mk{height:130px}
+.sizes{display:flex;flex-direction:column;align-items:center;gap:22px}
+.sizes div{display:flex;align-items:flex-end;gap:18px}
+.mini{display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px;letter-spacing:.14em}
+.mini .mk{height:26px}
+.pal{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:18px}
+.sw{border-radius:4px;padding:40px 12px 10px;font-size:.82rem;line-height:1.35;border:1px solid var(--line)}
+.sw b{display:block;font-weight:600}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="mk" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="46" fill="none" style="stroke:var(--ring)" stroke-width="3.6"/>
+<path d="M7 57Q50 76 93 57" fill="none" style="stroke:var(--lat)" stroke-width="2.4" stroke-linecap="round"/>
+<g transform="rotate(30 50 50)"><path d="M50 12A43 43 0 0 1 50 88A43 43 0 0 1 50 12Z" style="fill:var(--lens);stroke:var(--gap)" stroke-width="3.5"/>
+<path d="M50 12C36 34 64 66 50 88" fill="none" style="stroke:var(--gap)" stroke-width="4.2"/></g>
+</symbol>
+</defs></svg>
+<main>
+<h1>Cai Mep Coffee</h1>
+<p class="note">The symbol is a globe whose meridian lens doubles as a coffee bean and a leaf, crossed by a copper line of latitude.</p>
+
+<section class="panel hero">
+<div class="hz"><svg class="mk"><use href="#mk"/></svg>
+<div class="wm"><b>CAI MEP</b><div class="sp coffee"><i>C</i><i>O</i><i>F</i><i>F</i><i>E</i><i>E</i></div></div></div>
+</section>
+
+<div class="grid">
+<div class="panel sm"><div class="st"><svg class="mk"><use href="#mk"/></svg>
+<div class="wm"><b>CAI MEP</b><div class="sp coffee"><i>C</i><i>O</i><i>F</i><i>F</i><i>E</i><i>E</i></div></div></div></div>
+<div class="panel sm cream sym"><svg class="mk"><use href="#mk"/></svg></div>
+<div class="panel sm rev"><div class="st"><svg class="mk"><use href="#mk"/></svg>
+<div class="wm"><b>CAI MEP</b><div class="sp coffee"><i>C</i><i>O</i><i>F</i><i>F</i><i>E</i><i>E</i></div></div></div></div>
+<div class="panel sm mono"><div class="sizes">
+<div><svg class="mk" style="height:64px"><use href="#mk"/></svg><svg class="mk" style="height:40px"><use href="#mk"/></svg><svg class="mk" style="height:24px"><use href="#mk"/></svg><svg class="mk" style="height:16px"><use href="#mk"/></svg></div>
+<span class="mini"><svg class="mk"><use href="#mk"/></svg>CAI MEP COFFEE</span></div></div>
+</div>
+
+<div class="pal">
+<div class="sw" style="background:#3f2518;color:#efe4d0"><b>Coffee brown</b>#3F2518</div>
+<div class="sw" style="background:#1f3d2f;color:#efe4d0"><b>Forest green</b>#1F3D2F</div>
+<div class="sw" style="background:#efe4d0;color:#3f2518"><b>Cream</b>#EFE4D0</div>
+<div class="sw" style="background:#b87333;color:#fff"><b>Copper</b>#B87333, accent</div>
+</div>
+</main>
+</body>
+</html>

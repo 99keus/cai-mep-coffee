@@ -11,6 +11,7 @@ export function ProductCard({ product: p }: { product: Product }) {
         aria-label={`View ${p.name}`}
       >
         <Image
+          loading="lazy"
           src={p.image}
           alt={p.imageAlt || p.name}
           fill

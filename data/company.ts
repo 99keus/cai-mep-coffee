@@ -3,7 +3,7 @@ export const company = {
   name: "Cai Mep Coffee",
   legalName: "CAI MEP INVESTMENT TRADING COMPANY LIMITED",
   tagline: "VIETNAMESE ROOTS. GLOBAL CONNECTIONS.",
-  logo: "/images/company/cm-coffee-logo-20261004.webp",
+  logo: "/images/company/cai-mep-logo.svg",
   email: "imex@caimeptrading.com.vn",
   whatsapp: "+84 334 717 101",
   whatsappHref: "https://wa.me/84334717101",
