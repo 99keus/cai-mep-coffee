@@ -1,16 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import {
-  ArrowUpRight,
-  Scale,
-  Mountain,
-  Layers,
-  PackageCheck,
-  Package,
-  ShieldCheck,
-  Box,
-  ShoppingBag,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { WhyMotion } from "@/components/WhyMotion";
 import { FeaturedMotion } from "@/components/FeaturedMotion";
 import { Hero } from "@/components/Hero";
@@ -56,38 +46,34 @@ export default function Home() {
           />
         </div>
         </div>
-        <div>
+        <div className="why-story-content">
           <p className="why-lead">
             Our supply network spans Vietnam’s key coffee regions, enabling stable sourcing and scalable shipment planning for our partners. From a few lots to full containers, we help you shape a coffee programme that grows with your business.
           </p>
           <div className="why-points">
             {[
               {
-                icon: Scale,
                 title: "Flexible volumes",
                 text: "Begin with a few lots or plan a full container. Match your order to your business needs.",
               },
               {
-                icon: Mountain,
                 title: "Connected across Vietnam",
                 text: "Our network spans key coffee-growing regions, supporting stable sourcing across your buying programme.",
               },
               {
-                icon: Layers,
                 title: "Coffee for your business",
                 text: "Green, roasted and ground options for importers, roasters and private label partners.",
               },
               {
-                icon: PackageCheck,
                 title: "Room to scale",
                 text: "Plan specifications, volumes and shipment timing with us as your demand grows.",
               },
-            ].map(({ icon: Icon, title, text }) => (
+            ].map(({ title, text }, index) => (
               <div key={title}>
-                <Icon size={24} strokeWidth={1.4} />
-                <div>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
+                <div className="why-point-content">
+                <span className="why-point-number">{String(index + 1).padStart(2, "0")}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
                 </div>
               </div>
             ))}

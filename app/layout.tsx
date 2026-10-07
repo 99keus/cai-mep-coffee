@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Header } from "@/components/Header";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { SmoothScroll } from "@/components/SmoothScroll";
 import { Footer } from "@/components/Footer";
 import { company } from "@/data/company";
+import "lenis/dist/lenis.css";
 import "./globals.css";
 const montserrat = localFont({
   src: [
@@ -39,6 +41,7 @@ export default function RootLayout({
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <SmoothScroll />
         <ScrollReveal />
       </body>
     </html>

@@ -5,12 +5,12 @@ export function BrandLogo({ priority = false, animated = false }: { priority?: b
   if (animated) return (
     <span className="brand-lockup" role="img" aria-label="Cai Mep Coffee">
       <span className="brand-mark-piece">
+        <Image className="logo-light" src="/images/company/cai-mep-logo-symbol-white.svg" alt="" width={144} height={128} preload={priority} />
         <Image className="logo-dark" src="/images/company/cai-mep-logo-symbol.svg" alt="" width={144} height={128} preload={priority} />
-        <Image className="logo-light" src="/images/company/cai-mep-logo-symbol-reversed.svg" alt="" width={144} height={128} preload={priority} />
       </span>
       <span className="brand-words-mask"><span className="brand-words-piece">
+        <Image className="logo-light" src="/images/company/cai-mep-logo-words-white.svg" alt="" width={204} height={128} preload={priority} />
         <Image className="logo-dark" src="/images/company/cai-mep-logo-words.svg" alt="" width={204} height={128} preload={priority} />
-        <Image className="logo-light" src="/images/company/cai-mep-logo-words-reversed.svg" alt="" width={204} height={128} preload={priority} />
       </span></span>
     </span>
   );

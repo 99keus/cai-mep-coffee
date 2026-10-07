@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
 import { useQueryParams } from "@/lib/useQueryParams";
-import { ArrowUpRight, Download } from "lucide-react";
+import { Download } from "lucide-react";
+import { QuoteButtonContent } from "@/components/QuoteButton";
 import { products } from "@/data/products";
 import { company } from "@/data/company";
-export function ContactForm() {
+export function ContactForm({ variant = "page" }: { variant?: "page" | "inline" }) {
   const params = useQueryParams();
   const selected = products.some((p) => p.slug === params.get("product"))
     ? params.get("product")!
@@ -20,7 +21,10 @@ export function ContactForm() {
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
     const product =
       products.find((p) => p.slug === data.product)?.name || "Please advise";
-    const text = `COFFEE QUOTATION REQUEST\n\nName: ${data.name}\nCompany: ${data.company}\nEmail: ${data.email}\nCountry: ${data.country}\nProduct of Interest: ${product}\nRequired Quantity: ${data.quantity}\n\nMessage:\n${data.message}`;
+    const contactDetails = variant === "inline"
+      ? `Email: ${data.email}\nPhone: ${data.phone || "Not provided"}`
+      : `Company: ${data.company || "Not provided"}\nEmail: ${data.email}\nCountry: ${data.country || "Not provided"}`;
+    const text = `COFFEE QUOTATION REQUEST\n\nName: ${data.name}\n${contactDetails}\nProduct of Interest: ${product}\nRequired Quantity: ${data.quantity || "Please advise"}\n\nMessage:\n${data.message}`;
     try {
       if (company.inquiryEndpoint) {
         const response = await fetch(company.inquiryEndpoint, {
@@ -67,11 +71,11 @@ export function ContactForm() {
     setTimeout(() => URL.revokeObjectURL(url), 10000);
   }
   return (
-    <form className="contact-form" onSubmit={submit}>
-      <h1>Tell us about your next coffee.</h1>
+    <form className={`contact-form${variant === "inline" ? " contact-form-inline" : ""}`} onSubmit={submit}>
+      {variant === "inline" ? <h3>Request a quote.</h3> : <h1>Tell us about your next coffee.</h1>}
       <p className="form-intro">Fields marked * are required.</p>
       <div className="form-grid">
-        <label>
+        <label className={variant === "inline" ? "full-width" : undefined}>
           Name *
           <input
             name="name"
@@ -81,7 +85,7 @@ export function ContactForm() {
             placeholder="Your full name"
           />
         </label>
-        <label>
+        {variant === "page" && <label>
           Company
           <input
             name="company"
@@ -89,7 +93,7 @@ export function ContactForm() {
             maxLength={160}
             placeholder="Company name"
           />
-        </label>
+        </label>}
         <label>
           Email *
           <input
@@ -102,12 +106,13 @@ export function ContactForm() {
           />
         </label>
         <label>
-          Country
+          {variant === "inline" ? "Phone" : "Country"}
           <input
-            name="country"
-            autoComplete="country-name"
+            name={variant === "inline" ? "phone" : "country"}
+            type={variant === "inline" ? "tel" : "text"}
+            autoComplete={variant === "inline" ? "tel" : "country-name"}
             maxLength={100}
-            placeholder="Country / destination"
+            placeholder={variant === "inline" ? "Your phone number" : "Country / destination"}
           />
         </label>
         <label>
@@ -135,9 +140,9 @@ export function ContactForm() {
           <textarea
             name="message"
             required
-            rows={5}
+            rows={variant === "inline" ? 3 : 5}
             maxLength={6000}
-            placeholder="Tell us your grade, screen size, processing method, packing requirements and preferred shipment timing."
+            placeholder={variant === "inline" ? "Tell us about your coffee needs." : "Tell us your grade, screen size, processing method, packing requirements and preferred shipment timing."}
           />
         </label>
       </div>
@@ -147,9 +152,8 @@ export function ContactForm() {
           your request here; no message will be sent.
         </p>
       )}
-      <button type="submit" className="button" disabled={busy}>
-        {busy ? "Preparing…" : "Request a Quote"}
-        <ArrowUpRight size={18} />
+      <button type="submit" className="button quote-button" disabled={busy}>
+        <QuoteButtonContent label={busy ? "Preparing…" : "Request a Quote"} />
       </button>
       <div aria-live="polite" role="status">
         {status && (

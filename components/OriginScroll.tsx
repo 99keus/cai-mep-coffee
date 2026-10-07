@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect, useRef, type ReactNode } from "react";
-import Lenis from "lenis";
-import "lenis/dist/lenis.css";
 
-/** Keep the origin copy server-rendered; enhance only this route with motion. */
+/** Keep origin parallax separate from the site's shared scroll controller. */
 export function OriginScroll({ children }: { children: ReactNode }) {
   const root = useRef<HTMLDivElement>(null);
 
@@ -18,13 +16,6 @@ export function OriginScroll({ children }: { children: ReactNode }) {
       dispose();
       if (!element || preference.matches) return;
 
-      const lenis = new Lenis({
-        autoRaf: true,
-        lerp: 0.085,
-        smoothWheel: true,
-        syncTouch: false,
-        anchors: { offset: -100 },
-      });
       const sections = Array.from(element.querySelectorAll<HTMLElement>(".origin-landscape"));
       let frame = 0;
       element.dataset.motion = "enabled";
@@ -47,7 +38,6 @@ export function OriginScroll({ children }: { children: ReactNode }) {
       paint();
 
       dispose = () => {
-        lenis.destroy();
         cancelAnimationFrame(frame);
         window.removeEventListener("scroll", schedule);
         window.removeEventListener("resize", schedule);

@@ -1,7 +1,8 @@
 "use client";
 import { useRef, useState, type ReactNode, type KeyboardEvent } from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { QuoteButton } from "@/components/QuoteButton";
 const sections = ["Overview", "Specifications"] as const;
 export function ProductDetailTabs({ overview, specifications, slug }: { overview: ReactNode; specifications: ReactNode; slug: string }) {
   const [active, setActive] = useState(0);
@@ -27,6 +28,6 @@ export function ProductDetailTabs({ overview, specifications, slug }: { overview
       <section id="product-panel-0" role="tabpanel" aria-labelledby="product-tab-0" tabIndex={0} hidden={active !== 0}>{overview}</section>
       <section id="product-panel-1" role="tabpanel" aria-labelledby="product-tab-1" tabIndex={0} hidden={active !== 1}>{specifications}</section>
     </div>
-    <div className="product-detail-actions"><Link className="button" href={`/contact?product=${slug}`}>Request a Quote <ArrowUpRight size={18}/></Link><Link className="button outline" href="/contact">Contact Us</Link></div>
+    <div className="product-detail-actions"><QuoteButton href={`/contact?product=${slug}`} /><Link className="button outline" href="/contact">Contact Us</Link></div>
   </div>;
 }
