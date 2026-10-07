@@ -2330,7 +2330,7 @@ a[role="button"] {
   width: 100%;
   max-width: none;
   text-align: center;
-  font-size: clamp(48px, 7vw, 112px);
+  font-size: clamp(12px, 4vw, 64px);
   font-weight: 400;
   line-height: 1.15;
   letter-spacing: -.045em;
@@ -2421,3 +2421,39 @@ a[role="button"] {
   .why-section .why-photo { transform: none; }
   .why-section::before { transform: none; }
 }
+
+.why-statement-line { display: block; white-space: nowrap; }
+
+/* Homepage origins: continue the green palette and let the landscapes lead. */
+.site-header .header-quote,
+.site-header .header-quote .header-quote-label { color: #fff; }
+.origins-section { background: linear-gradient(180deg, #2e5934, var(--forest)); color: #fff; padding-block: 96px; }
+.origins-section .section-heading { align-items: end; gap: 32px; margin-bottom: 40px; }
+.origins-section .section-heading > div { max-width: 740px; }
+.origins-section .eyebrow { color: #d4dfcf; }
+.origins-section h2 { color: #fff; font-weight: 400; font-size: clamp(30px, 3.6vw, 54px); line-height: 1.15; }
+.origins-section .text-link { color: #fff; border-color: rgba(255,255,255,.45); flex-shrink: 0; }
+.origins-section .origin-grid { gap: 22px; }
+.origins-section .origin-card { position: relative; overflow: hidden; border-radius: 24px; isolation: isolate; }
+.origins-section .origin-card-image { aspect-ratio: 3 / 4; border-radius: inherit; }
+.origins-section .origin-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 35%, rgba(8,25,16,.8)); pointer-events: none; }
+.origins-section .origin-card-caption { position: absolute; z-index: 1; bottom: 24px; left: 22px; right: 22px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.origins-section .origin-card h3 { color: #fff; margin: 0; font-size: clamp(22px, 2.2vw, 30px); font-weight: 500; }
+.origins-section .origin-card p { color: rgba(255,255,255,.85); margin-top: 8px; }
+.origins-section .origin-card img { transition: transform .4s ease; }
+.origins-section .origin-card:hover img { transform: scale(1.035); }
+.origins-section .origin-card:focus-visible { outline: 2px solid #fff; outline-offset: 5px; }
+@media (max-width: 1000px) {
+  .origins-section .origin-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .origins-section .section-heading { align-items: start; flex-direction: column; }
+}
+@media (max-width: 600px) {
+  .origins-section { padding-block: 64px; }
+  .origins-section .origin-grid { grid-template-columns: 1fr; gap: 20px; }
+  .origins-section .origin-card-image { aspect-ratio: 4 / 3; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .origins-section .origin-card img { transition: none; }
+}
+
+.site-header .header-quote-label { mix-blend-mode: normal; }

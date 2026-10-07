@@ -16,8 +16,9 @@ const productLinks = [
   { label: "Ground Coffee", href: "/products?category=Ground%20Coffee" },
 ];
 const links = [
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/products", label: "Product", children: productLinks },
+  { href: "/products", label: "Products", children: productLinks },
   { href: "/coffee-origins", label: "Origin", children: [
     { label: "Explore all origins", href: "/coffee-origins" },
     ...origins.map(o => ({ label: o.name, href: `/coffee-origins#${o.slug}` })),

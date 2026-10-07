@@ -26,15 +26,17 @@ export default function Home() {
       <section className="why-section">
         <WhyMotion>
         <div className="why-introduction">
-        <h2 className="why-statement" aria-label="Rooted in Vietnam. Ready to grow with you.">
-          {"Rooted in Vietnam. Ready to grow with you.".split(" ").map((word, index) => (
-            <span className="why-title-piece" aria-hidden="true" key={index}>
-              <span className="why-word"><span className="why-word-inner">{word}</span></span>
-              {(index === 2 || index === 5) && (
-                <span className="why-word why-title-image"><span className="why-word-inner">
-                  <Image src={index === 2 ? "/images/company/vietnam-flag.svg" : "/images/company/cai-mep-logo-symbol.svg"} alt="" width={150} height={90} className={index === 2 ? "why-title-flag" : "why-title-mark"} />
-                </span></span>
-              )}
+        <h2 className="why-statement" aria-label="Good coffee begins at origin. Good partnerships begin here.">
+          {["Good coffee begins at origin.", "Good partnerships begin here."].map((sentence, lineIndex) => (
+            <span className="why-statement-line" key={sentence}>
+              {sentence.split(" ").map((word, index) => (
+                <span className="why-title-piece" aria-hidden="true" key={index}>
+                  <span className="why-word"><span className="why-word-inner">{word}</span></span>
+                </span>
+              ))}
+              <span className="why-word why-title-image" aria-hidden="true"><span className="why-word-inner">
+                <Image src={lineIndex === 0 ? "/images/company/vietnam-flag.svg" : "/images/company/cai-mep-logo-symbol.svg"} alt="" width={150} height={90} className={lineIndex === 0 ? "why-title-flag" : "why-title-mark"} />
+              </span></span>
             </span>
           ))}
         </h2>
@@ -56,7 +58,7 @@ export default function Home() {
         </div>
         <div>
           <p className="why-lead">
-            Our supply network spans Vietnam’s key coffee regions, enabling stable sourcing and scalable shipment planning for importers, roasters, and private label partners. From a few lots to a full container, we help you shape a coffee programme that grows with your business.
+            Our supply network spans Vietnam’s key coffee regions, enabling stable sourcing and scalable shipment planning for our partners. From a few lots to full containers, we help you shape a coffee programme that grows with your business.
           </p>
           <div className="why-points">
             {[
@@ -124,8 +126,8 @@ export default function Home() {
             </Link>
           </div>
           <div className="origin-grid">
-            {origins.map((o, i) => (
-              <OriginCard key={o.slug} origin={o} index={i} />
+            {origins.map((o) => (
+              <OriginCard key={o.slug} origin={o} />
             ))}
           </div>
         </div>
