@@ -153,7 +153,7 @@ export function ContactForm({ variant = "page" }: { variant?: "page" | "inline" 
         </p>
       )}
       <button type="submit" className="button quote-button" disabled={busy}>
-        <QuoteButtonContent label={busy ? "Preparing…" : "Request a Quote"} />
+        <QuoteButtonContent label={busy ? "Preparing…" : "Send to us"} />
       </button>
       <div aria-live="polite" role="status">
         {status && (
