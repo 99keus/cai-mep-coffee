@@ -81,6 +81,32 @@ Typography: Montserrat is bundled locally in `public/fonts/` with its OFL licens
 ### About page
 The company story and photo captions are in `app/about/page.tsx`. Its layout uses the `.about-editorial` styles at the end of `app/globals.css`. The local photographs are in `public/images/company/`; sources and licence details are recorded in `docs/about-photography.md`. Update the visible credits when replacing sourced photos with company photography.
 
+## cPanel Node.js deployment
+
+Use Node.js 22 and set Application root to the repository directory (for example,
+`repositories/cai-mep-coffee`), Application mode to Production, and Application
+startup file to `app.js`. Select the website domain and leave the URL path empty
+to serve its root. Set `NEXT_PUBLIC_SITE_URL` to the final HTTPS website URL.
+
+After creating the application, copy the environment activation command shown by
+cPanel into its Terminal. From the repository directory, run:
+
+```bash
+npm install --include=dev
+npm run build -- --webpack
+```
+
+Then restart the application in cPanel. `app.js` serves only the generated `out/`
+directory and requires `out/index.html` to exist before startup. `npm start` runs
+the same server locally, using `PORT` when supplied or port 3000 otherwise.
+The cPanel Passenger integration manages public HTTP/HTTPS routing; do not open
+port 3000 manually. Resolve domain DNS and AutoSSL separately.
+
+For updates, pull the GitHub changes, install dependencies, rebuild, and restart
+the application. Build dependencies are needed even in Production mode, so keep
+`--include=dev` when installing on the server. On CloudLinux, use the activated
+environment's npm and preserve its managed `node_modules` directory or symlink.
+
 ## Netlify deployment
 
 `netlify.toml` configures the build command and `out` publish directory. For a manual deployment, upload the **contents of `out`** (or a ZIP with `index.html` at its root) through Netlify Drop. Do not upload the entire workspace or backup folders.
