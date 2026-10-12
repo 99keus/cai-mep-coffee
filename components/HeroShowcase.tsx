@@ -36,7 +36,7 @@ export function HeroShowcase() {
     if (!root || !list) return;
     gsap.registerPlugin(Draggable, InertiaPlugin);
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const items = Array.from(list.querySelectorAll<HTMLButtonElement>(".showcase-coffee"));
+    const items = Array.from(list.querySelectorAll<HTMLAnchorElement>(".showcase-coffee"));
     let spacing = items[0].offsetWidth * 1.1;
     let pressSlot = 0;
     let draggable: Draggable;
@@ -171,11 +171,16 @@ export function HeroShowcase() {
         {showcaseCoffees.map(({ coffee, index, slot }) => {
           const offset = coffeeIndex(index - selected);
           const position = offset === 0 ? "center" : offset === 1 ? "right" : "left";
-          return <button key={slot} type="button" className="showcase-coffee" data-position={position} data-loop-copy={slot < 0 || slot >= coffees.length} data-coffee-index={index} aria-hidden={slot < 0 || slot >= coffees.length} tabIndex={slot === 0 ? 0 : -1} aria-label={`Select ${coffee.name}`} aria-pressed={selected === index}
-            onClick={() => selectCoffee.current?.(index)}>
+          return <Link key={slot} href={`/products?category=${encodeURIComponent(coffee.name)}`} draggable={false} className="showcase-coffee" data-position={position} data-loop-copy={slot < 0 || slot >= coffees.length} data-coffee-index={index} aria-hidden={slot < 0 || slot >= coffees.length} tabIndex={slot === 0 ? 0 : -1} aria-label={`${position === "center" ? "Explore" : "Show"} ${coffee.name}`}
+            onClick={event => {
+              if (index !== selectedIndex.current) {
+                event.preventDefault();
+                selectCoffee.current?.(index);
+              }
+            }}>
             <Image src={coffee.image} alt={coffee.name} width={600} height={600} preload sizes="(max-width:760px) 75vw, 420px" draggable={false} />
             <span>{coffee.name}</span>
-          </button>;
+          </Link>;
         })}
       </div>
     </div>

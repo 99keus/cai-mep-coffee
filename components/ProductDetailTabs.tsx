@@ -1,10 +1,9 @@
 "use client";
 import { useRef, useState, type ReactNode, type KeyboardEvent } from "react";
-import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { QuoteButton } from "@/components/QuoteButton";
+import { company } from "@/data/company";
+import { ArrowLeft, ArrowRight, MessageCircle } from "lucide-react";
 const sections = ["Overview", "Specifications"] as const;
-export function ProductDetailTabs({ overview, specifications, slug }: { overview: ReactNode; specifications: ReactNode; slug: string }) {
+export function ProductDetailTabs({ overview, specifications }: { overview: ReactNode; specifications: ReactNode; slug: string }) {
   const [active, setActive] = useState(0);
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
@@ -28,6 +27,6 @@ export function ProductDetailTabs({ overview, specifications, slug }: { overview
       <section id="product-panel-0" role="tabpanel" aria-labelledby="product-tab-0" tabIndex={0} hidden={active !== 0}>{overview}</section>
       <section id="product-panel-1" role="tabpanel" aria-labelledby="product-tab-1" tabIndex={0} hidden={active !== 1}>{specifications}</section>
     </div>
-    <div className="product-detail-actions"><QuoteButton href={`/contact?product=${slug}`} /><Link className="button outline" href="/contact">Contact Us</Link></div>
+    <div className="product-detail-actions"><a className="product-whatsapp-link" href={company.whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle size={17} aria-hidden="true" /> Chat on WhatsApp</a></div>
   </div>;
 }

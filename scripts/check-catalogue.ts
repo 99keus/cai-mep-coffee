@@ -4,7 +4,7 @@ import { join } from "node:path";
 import { products, filterProducts } from "../data/products.ts";
 import { productSpecifications } from "../data/product-specifications.ts";
 
-const manifest = JSON.parse(readFileSync("docs/catalogue-word-import-20261003.json", "utf8")) as {
+const manifest = JSON.parse(readFileSync("docs/catalogue-word-import-20261012.json", "utf8")) as {
   removedSlugs: string[];
   products: { slug: string; name: string; overview: string; flavorNotes: string; technical: { label: string; value: string }[] }[];
 };
@@ -22,13 +22,13 @@ for (const slug of manifest.removedSlugs) {
   assert.ok(!existsSync(`out/products/${slug}/index.html`), `Removed product still exported: ${slug}`);
 }
 
-assert.equal(products.length, 22);
-assert.equal(new Set(products.map((p) => p.slug)).size, 22);
+assert.equal(products.length, 20);
+assert.equal(new Set(products.map((p) => p.slug)).size, 20);
 assert.deepEqual(
   ["Green Coffee Beans", "Roasted Coffee Beans", "Ground Coffee"].map(
     (category) => filterProducts({ category }).length,
   ),
-  [15, 4, 3],
+  [14, 3, 3],
 );
 assert.deepEqual(
   filterProducts({
@@ -58,8 +58,8 @@ for (const product of products) {
     `Missing metadata: ${file}`,
   );
   assert.ok(
-    html.includes(`product=${product.slug}`),
-    `Missing quote preselection: ${file}`,
+    html.includes("Chat on WhatsApp"),
+    `Missing WhatsApp action: ${file}`,
   );
   const specs = productSpecifications[product.slug];
   assert.ok(specs, `Missing researched specification profile: ${product.slug}`);
@@ -96,7 +96,7 @@ for (const route of ["", "products", "about", "coffee-origins", "contact"])
   );
 assert.ok(
   readFileSync("out/products/index.html", "utf8").includes(
-    "Robusta G1 S18 Clean",
+    "Robusta G1 S18 Cleaned",
   ),
   "Catalogue must be server-rendered for SEO",
 );
@@ -113,5 +113,5 @@ for (const file of htmlFiles("out")) {
   }
 }
 console.log(
-  "PASS: 22 product pages, 5 main routes, metadata, images, internal references, owner-supplied specs, two-tab layout and filter combinations.",
+  "PASS: 20 product pages, 5 main routes, metadata, images, internal references, owner-supplied specs, two-tab layout and filter combinations.",
 );

@@ -1,0 +1,605 @@
+{
+  "source": "Coffee_Product_Catalog_Spec.docx",
+  "removedSlugs": [
+    "arabica-g1-s18-natural",
+    "roasted-coffee-blend"
+  ],
+  "products": [
+    {
+      "slug": "robusta-g1-s18-clean",
+      "name": "Robusta G1 S18 Cleaned",
+      "overview": "Grade 1, screen 18 — the standard pick for buyers blending large-bean Robusta into commercial roasts without needing the extra wet-polished finish.",
+      "flavorNotes": "bold, earthy, heavy body.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 12.5%"
+        },
+        {
+          "label": "Foreign matter",
+          "value": "≤ 0.1%"
+        },
+        {
+          "label": "Black & Broken",
+          "value": "≤ 0.5%"
+        },
+        {
+          "label": "Screen size",
+          "value": "≥ 90% on Screen 18"
+        },
+        {
+          "label": "Packing",
+          "value": "60kg jute bags"
+        },
+        {
+          "label": "Processing",
+          "value": "Dry Processed"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/robusta-g1-s18-clean.webp"
+    },
+    {
+      "slug": "robusta-g1-s16-clean",
+      "name": "Robusta G1 S16 Cleaned",
+      "overview": "A mid-size grade 1 bean at a lower price point than S18, common in instant coffee lines and everyday commercial blends.",
+      "flavorNotes": "strong, earthy, full-bodied.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 12.5%"
+        },
+        {
+          "label": "Foreign matter",
+          "value": "≤ 0.1%"
+        },
+        {
+          "label": "Black & Broken",
+          "value": "≤ 0.5%"
+        },
+        {
+          "label": "Screen size",
+          "value": "≥ 90% on Screen 16"
+        },
+        {
+          "label": "Packing",
+          "value": "60kg jute bags"
+        },
+        {
+          "label": "Processing",
+          "value": "Dry Processed"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/robusta-g1-s16-clean.webp"
+    },
+    {
+      "slug": "robusta-g1-s18-wet-polished",
+      "name": "Robusta G1 S18 Wet Polished",
+      "overview": "Large beans with the surface polished after wet processing, giving the cleaner look buyers look for in espresso blends and premium commercial lines.",
+      "flavorNotes": "bold, earthy, heavy body.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 12.5%"
+        },
+        {
+          "label": "Foreign matter",
+          "value": "≤ 0.1%"
+        },
+        {
+          "label": "Black & Broken",
+          "value": "≤ 0.3%"
+        },
+        {
+          "label": "Screen size",
+          "value": "≥ 90% on Screen 18"
+        },
+        {
+          "label": "Packing",
+          "value": "60kg jute bags"
+        },
+        {
+          "label": "Processing",
+          "value": "Wet Polished"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/robusta-g1-s18-wet-polished.webp"
+    },
+    {
+      "slug": "robusta-g1-s16-wet-polished",
+      "name": "Robusta G1 S16 Wet Polished",
+      "overview": "The same polished finish as the S18 grade, in a smaller bean for buyers who don't need the largest screen size.",
+      "flavorNotes": "bold, nutty, heavy body.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 12.5%"
+        },
+        {
+          "label": "Foreign matter",
+          "value": "≤ 0.1%"
+        },
+        {
+          "label": "Black & Broken",
+          "value": "≤ 0.3%"
+        },
+        {
+          "label": "Screen size",
+          "value": "≥ 90% on Screen 16"
+        },
+        {
+          "label": "Packing",
+          "value": "60kg jute bags"
+        },
+        {
+          "label": "Processing",
+          "value": "Wet Polished"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/robusta-g1-s16-wet-polished.webp"
+    },
+    {
+      "slug": "robusta-g2-s13-14",
+      "name": "Robusta G2 S13–14",
+      "overview": "Vietnam's standard commodity Robusta - the grade most instant coffee manufacturers and value blends are built on.",
+      "flavorNotes": "bitter, earthy, high intensity.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 13%"
+        },
+        {
+          "label": "Foreign matter",
+          "value": "≤ 1.0%"
+        },
+        {
+          "label": "Black & Broken",
+          "value": "2.0% – 5.0%"
+        },
+        {
+          "label": "Screen size",
+          "value": "≥ 90% on Screen 13"
+        },
+        {
+          "label": "Packing",
+          "value": "60kg jute bags"
+        },
+        {
+          "label": "Processing",
+          "value": "Dry Processed"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/robusta-g2-s13-14.webp"
+    },
+    {
+      "slug": "robusta-peaberry",
+      "name": "Robusta Peaberry (Culi)",
+      "overview": "A naturally occurring round bean, sorted out of the regular crop rather than grown separately. Buyers typically take it as a small-volume, talking-point lot.",
+      "flavorNotes": "concentrated, heavy, intense.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 12.5%"
+        },
+        {
+          "label": "Foreign matter",
+          "value": "≤ 0.5%"
+        },
+        {
+          "label": "Black & Broken",
+          "value": "≤ 0.5%"
+        },
+        {
+          "label": "Bean form",
+          "value": "Round (single bean), naturally occurring ~5–8% of crop*"
+        },
+        {
+          "label": "Packing",
+          "value": "60kg jute bags"
+        },
+        {
+          "label": "Processing",
+          "value": "Dry Processed"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/robusta-peaberry.webp"
+    },
+    {
+      "slug": "fine-robusta-natural",
+      "name": "Fine Robusta Natural",
+      "overview": "Hand-sorted Robusta dried with the cherry skin on, held to a tighter defect standard than the commercial grades for roasters building a quality Robusta line.",
+      "flavorNotes": "sweet, fruit-forward, full body.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 12%"
+        },
+        {
+          "label": "Defects",
+          "value": "5 (CQI)"
+        },
+        {
+          "label": "Screen size",
+          "value": "≥ 90% on Screen 15/13"
+        },
+        {
+          "label": "Processing",
+          "value": "Natural Processed"
+        },
+        {
+          "label": "Packing",
+          "value": "60kg jute bags, or GrainPro liner on request"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/fine-robusta-natural.webp"
+    },
+    {
+      "slug": "fine-robusta-honey",
+      "name": "Fine Robusta Honey",
+      "overview": "Part of the mucilage stays on the bean during drying, adding a sweetness most standard Robusta doesn't have - aimed at specialty buyers looking past washed and natural.",
+      "flavorNotes": "honeyed, dried fruit, full body.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 12%"
+        },
+        {
+          "label": "Defects",
+          "value": "5 (CQI)"
+        },
+        {
+          "label": "Screen size",
+          "value": "≥ 90% on Screen 15/13"
+        },
+        {
+          "label": "Processing",
+          "value": "Honey Processed (partial mucilage retained during drying)"
+        },
+        {
+          "label": "Packing",
+          "value": "60kg jute bags, or GrainPro liner on request"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/fine-robusta-honey.webp"
+    },
+    {
+      "slug": "arabica-g1-s18-washed",
+      "name": "Arabica G1 S18 Washed",
+      "overview": "Large, fully washed beans — the grade most specialty and premium commercial roasters default to for a clean cup.",
+      "flavorNotes": "bright acidity, clean, light fruit.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 12.5%"
+        },
+        {
+          "label": "Foreign matter",
+          "value": "≤ 0.1%"
+        },
+        {
+          "label": "Black & Broken",
+          "value": "≤ 0.5%"
+        },
+        {
+          "label": "Screen size",
+          "value": "≥ 90% on Screen 18"
+        },
+        {
+          "label": "Processing",
+          "value": "Fully washed"
+        },
+        {
+          "label": "Packing",
+          "value": "60kg jute bags"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/arabica-g1-s18-washed.webp"
+    },
+    {
+      "slug": "arabica-g1-s16-washed",
+      "name": "Arabica G1 S16 Washed",
+      "overview": "The same washed process as the S18 grade, in a smaller bean for roasters who don't need maximum screen size.",
+      "flavorNotes": "bright acidity, clean, light fruit.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 12.5%"
+        },
+        {
+          "label": "Foreign matter",
+          "value": "≤ 0.1%"
+        },
+        {
+          "label": "Black & Broken",
+          "value": "≤ 0.5%"
+        },
+        {
+          "label": "Screen size",
+          "value": "≥ 90% on Screen 16"
+        },
+        {
+          "label": "Processing",
+          "value": "Fully washed"
+        },
+        {
+          "label": "Packing",
+          "value": "60kg jute bags"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/arabica-g1-s16-washed.webp"
+    },
+    {
+      "slug": "arabica-g2-s13-14",
+      "name": "Arabica G2 S13–14",
+      "overview": "The commercial-grade Arabica most buyers reach for when price matters more than bean size or sorting.",
+      "flavorNotes": "low acidity, soft, easy-drinking.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 13%"
+        },
+        {
+          "label": "Foreign matter",
+          "value": "≤ 1.0%"
+        },
+        {
+          "label": "Black & Broken",
+          "value": "≤ 1.0%"
+        },
+        {
+          "label": "Screen size",
+          "value": "≥ 90% on Screen 13"
+        },
+        {
+          "label": "Processing",
+          "value": "Washed"
+        },
+        {
+          "label": "Packing",
+          "value": "60kg jute bags"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/arabica-g2-s13-14.webp"
+    },
+    {
+      "slug": "arabica-catimor-washed",
+      "name": "Arabica Catimor Washed",
+      "overview": "Catimor is the high-yield cultivar grown across Vietnam's Arabica regions, washed here for a straightforward, reliable cup.",
+      "flavorNotes": "mild acidity, light body, clean finish.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 12.5%"
+        },
+        {
+          "label": "Foreign matter",
+          "value": "≤ 0.2%"
+        },
+        {
+          "label": "Black & Broken",
+          "value": "≤ 0.5%"
+        },
+        {
+          "label": "Variety",
+          "value": "Catimor"
+        },
+        {
+          "label": "Processing",
+          "value": "Fully washed"
+        },
+        {
+          "label": "Packing",
+          "value": "60kg jute bags"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/arabica-catimor-washed.webp"
+    },
+    {
+      "slug": "arabica-moka",
+      "name": "Arabica Moka Washed",
+      "overview": "A rare heirloom variety grown in small volume in Vietnam's highlands, washed here and offered mainly as a micro-lot for specialty buyers.",
+      "flavorNotes": "delicate, floral, subtly sweet.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 12.5%"
+        },
+        {
+          "label": "Foreign matter",
+          "value": "≤ 0.1%"
+        },
+        {
+          "label": "Black & Broken",
+          "value": "≤ 0.1%"
+        },
+        {
+          "label": "Variety",
+          "value": "Moka (heirloom, low yield)"
+        },
+        {
+          "label": "Processing",
+          "value": "Fully washed"
+        },
+        {
+          "label": "Availability",
+          "value": "Limited volume, seasonal*"
+        },
+        {
+          "label": "Packing",
+          "value": "30kg or 60kg bags, GrainPro liner recommended"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/arabica-moka.webp"
+    },
+    {
+      "slug": "excelsa-g1-s16-clean",
+      "name": "Excelsa G1 S16 Clean",
+      "overview": "A separate coffee species altogether, grown in small volume in Vietnam. Buyers use it for single-origin specialty offers or to add complexity to a blend.",
+      "flavorNotes": "tart, fruity, unlike either Robusta or Arabica.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 12.5%"
+        },
+        {
+          "label": "Foreign matter",
+          "value": "≤ 0.5%"
+        },
+        {
+          "label": "Defective beans",
+          "value": "≤ 2.0"
+        },
+        {
+          "label": "Screen size",
+          "value": "≥ 90% on Screen 16"
+        },
+        {
+          "label": "Packing",
+          "value": "60kg jute bags"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/excelsa-g1-s16-clean.webp"
+    },
+    {
+      "slug": "roasted-robusta",
+      "name": "Roasted Robusta",
+      "overview": "Whole bean, roasted to the buyer's specification from our green Robusta lots — ready to brew with no further processing needed on the buyer's end.",
+      "flavorNotes": "bold, bitter-chocolate, heavy body.",
+      "technical": [
+        {
+          "label": "Ripeness ratio",
+          "value": "85-87%"
+        },
+        {
+          "label": "Form",
+          "value": "Whole bean"
+        },
+        {
+          "label": "Roast level",
+          "value": "Light / Medium / Dark — customizable"
+        },
+        {
+          "label": "Processing",
+          "value": "Natural / Honey"
+        },
+        {
+          "label": "Packing",
+          "value": "Valve-sealed bags, custom weight"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/roasted-robusta.webp"
+    },
+    {
+      "slug": "roasted-arabica",
+      "name": "Roasted Arabica",
+      "overview": "Whole bean, roasted to order — the straightforward choice for buyers wanting a finished product with Vietnamese Arabica's cleaner character.",
+      "flavorNotes": "balanced acidity, light sour, little bitter.",
+      "technical": [
+        {
+          "label": "Ripeness ratio",
+          "value": "99%"
+        },
+        {
+          "label": "Form",
+          "value": "Whole bean"
+        },
+        {
+          "label": "Roast level",
+          "value": "Light / Medium / Dark — customizable"
+        },
+        {
+          "label": "Processing",
+          "value": "Washed"
+        },
+        {
+          "label": "Packing",
+          "value": "Valve-sealed bags, custom weight"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/roasted-arabica.webp"
+    },
+    {
+      "slug": "roasted-excelsa",
+      "name": "Roasted Excelsa",
+      "overview": "A finished, ready-to-brew version of our Excelsa lot, roasted on the lighter side to keep the variety's unusual character intact.",
+      "flavorNotes": "tart, fruity, complex.",
+      "technical": [
+        {
+          "label": "Form",
+          "value": "Whole bean"
+        },
+        {
+          "label": "Roast level",
+          "value": "Light / Medium / Dark — customizable"
+        },
+        {
+          "label": "Packing",
+          "value": "Valve-sealed bags, custom weight"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/roasted-excelsa.webp"
+    },
+    {
+      "slug": "ground-robusta",
+      "name": "Ground Robusta",
+      "overview": "Milled to a specified particle size, ready for retail or foodservice use without the buyer needing a grinding setup of their own.",
+      "flavorNotes": "bold, bitter-chocolate, heavy body.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 5%*"
+        },
+        {
+          "label": "Grind size",
+          "value": "Fine (espresso) / Medium (filter) / Coarse (French press) — per order"
+        },
+        {
+          "label": "Packing",
+          "value": "Airtight, moisture-barrier bags"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/ground-robusta.webp"
+    },
+    {
+      "slug": "ground-arabica",
+      "name": "Ground Arabica",
+      "overview": "Milled to order, for buyers who need a finished retail or foodservice product rather than whole bean.",
+      "flavorNotes": "balanced acidity, light sour, little bitter.",
+      "technical": [
+        {
+          "label": "Moisture",
+          "value": "≤ 5%*"
+        },
+        {
+          "label": "Grind size",
+          "value": "Fine (espresso) / Medium (filter) / Coarse (French press) — per order"
+        },
+        {
+          "label": "Packing",
+          "value": "Airtight, moisture-barrier bags"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/ground-arabica.webp"
+    },
+    {
+      "slug": "ground-coffee-blend",
+      "name": "Ground Coffee Blend",
+      "overview": "A custom Robusta / Arabica / Excelsa recipe, milled and ready for private-label packaging.",
+      "flavorNotes": "set by the buyer's chosen ratio.",
+      "technical": [
+        {
+          "label": "Grind size",
+          "value": "Fine (espresso) / Medium (filter) / Coarse (French press) — per order"
+        },
+        {
+          "label": "Blend ratio",
+          "value": "Custom, per buyer specification"
+        },
+        {
+          "label": "Packing",
+          "value": "Airtight, moisture-barrier bags"
+        }
+      ],
+      "image": "/images/products/catalogue-20261003/ground-coffee-blend.webp"
+    }
+  ]
+}

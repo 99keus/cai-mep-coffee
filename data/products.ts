@@ -33,7 +33,7 @@ export interface Product {
   featured: boolean;
 }
 
-// Owner-supplied catalogue, imported from Coffee_Product_Catalog_Content.docx (2026-10-03).
+// Owner-supplied catalogue imported from Coffee_Product_Catalog_Spec.docx (2026-10-12).
 export const products: Product[] = [
   {
     "id": "coffee-01",
@@ -44,17 +44,17 @@ export const products: Product[] = [
     "species": "Robusta",
     "grade": "G1",
     "screen": "S18",
-    "process": "Clean",
-    "name": "Robusta G1 S18 Clean",
+    "name": "Robusta G1 S18 Cleaned",
     "shortDescription": "Grade 1, screen 18 — the standard pick for buyers blending large-bean Robusta into commercial roasts without needing the extra wet-polished finish.",
     "description": "",
     "flavorNotes": "bold, earthy, heavy body.",
     "gallery": [],
+    "image": "/images/products/catalogue-20261003/robusta-g1-s18-clean.webp",
+    "imageAlt": "Robusta G1 S18 Cleaned — product photograph supplied by Cai Mep Coffee",
     "moisture": "≤ 12.5%",
     "foreignMatter": "≤ 0.1%",
     "packing": "60kg jute bags",
-    "image": "/images/products/catalogue-20261003/robusta-g1-s18-clean.webp",
-    "imageAlt": "Robusta G1 S18 Clean — product photograph supplied by Cai Mep Coffee"
+    "process": "Dry Processed"
   },
   {
     "id": "coffee-02",
@@ -65,17 +65,17 @@ export const products: Product[] = [
     "species": "Robusta",
     "grade": "G1",
     "screen": "S16",
-    "process": "Clean",
-    "name": "Robusta G1 S16 Clean",
+    "name": "Robusta G1 S16 Cleaned",
     "shortDescription": "A mid-size grade 1 bean at a lower price point than S18, common in instant coffee lines and everyday commercial blends.",
     "description": "",
     "flavorNotes": "strong, earthy, full-bodied.",
     "gallery": [],
+    "image": "/images/products/catalogue-20261003/robusta-g1-s16-clean.webp",
+    "imageAlt": "Robusta G1 S16 Cleaned — product photograph supplied by Cai Mep Coffee",
     "moisture": "≤ 12.5%",
     "foreignMatter": "≤ 0.1%",
     "packing": "60kg jute bags",
-    "image": "/images/products/catalogue-20261003/robusta-g1-s16-clean.webp",
-    "imageAlt": "Robusta G1 S16 Clean — product photograph supplied by Cai Mep Coffee"
+    "process": "Dry Processed"
   },
   {
     "id": "coffee-03",
@@ -86,17 +86,17 @@ export const products: Product[] = [
     "species": "Robusta",
     "grade": "G1",
     "screen": "S18",
-    "process": "Wet Polished",
     "name": "Robusta G1 S18 Wet Polished",
     "shortDescription": "Large beans with the surface polished after wet processing, giving the cleaner look buyers look for in espresso blends and premium commercial lines.",
     "description": "",
     "flavorNotes": "bold, earthy, heavy body.",
     "gallery": [],
+    "image": "/images/products/catalogue-20261003/robusta-g1-s18-wet-polished.webp",
+    "imageAlt": "Robusta G1 S18 Wet Polished — product photograph supplied by Cai Mep Coffee",
     "moisture": "≤ 12.5%",
     "foreignMatter": "≤ 0.1%",
     "packing": "60kg jute bags",
-    "image": "/images/products/catalogue-20261003/robusta-g1-s18-wet-polished.webp",
-    "imageAlt": "Robusta G1 S18 Wet Polished — product photograph supplied by Cai Mep Coffee"
+    "process": "Wet Polished"
   },
   {
     "id": "coffee-04",
@@ -107,17 +107,17 @@ export const products: Product[] = [
     "species": "Robusta",
     "grade": "G1",
     "screen": "S16",
-    "process": "Wet Polished",
     "name": "Robusta G1 S16 Wet Polished",
     "shortDescription": "The same polished finish as the S18 grade, in a smaller bean for buyers who don't need the largest screen size.",
     "description": "",
     "flavorNotes": "bold, nutty, heavy body.",
     "gallery": [],
+    "image": "/images/products/catalogue-20261003/robusta-g1-s16-wet-polished.webp",
+    "imageAlt": "Robusta G1 S16 Wet Polished — product photograph supplied by Cai Mep Coffee",
     "moisture": "≤ 12.5%",
     "foreignMatter": "≤ 0.1%",
     "packing": "60kg jute bags",
-    "image": "/images/products/catalogue-20261003/robusta-g1-s16-wet-polished.webp",
-    "imageAlt": "Robusta G1 S16 Wet Polished — product photograph supplied by Cai Mep Coffee"
+    "process": "Wet Polished"
   },
   {
     "id": "coffee-06",
@@ -129,15 +129,16 @@ export const products: Product[] = [
     "grade": "G2",
     "screen": "S13-14",
     "name": "Robusta G2 S13–14",
-    "shortDescription": "Vietnam's standard commodity Robusta — the grade most instant coffee manufacturers and value blends are built on.",
+    "shortDescription": "Vietnam's standard commodity Robusta - the grade most instant coffee manufacturers and value blends are built on.",
     "description": "",
     "flavorNotes": "bitter, earthy, high intensity.",
     "gallery": [],
+    "image": "/images/products/catalogue-20261003/robusta-g2-s13-14.webp",
+    "imageAlt": "Robusta G2 S13–14 — product photograph supplied by Cai Mep Coffee",
     "moisture": "≤ 13%",
     "foreignMatter": "≤ 1.0%",
     "packing": "60kg jute bags",
-    "image": "/images/products/catalogue-20261003/robusta-g2-s13-14.webp",
-    "imageAlt": "Robusta G2 S13–14 — product photograph supplied by Cai Mep Coffee"
+    "process": "Dry Processed"
   },
   {
     "id": "coffee-08",
@@ -152,11 +153,12 @@ export const products: Product[] = [
     "description": "",
     "flavorNotes": "concentrated, heavy, intense.",
     "gallery": [],
-    "moisture": "≤ 12.5%",
-    "foreignMatter": "≤ 0.2%*",
-    "packing": "60kg jute bags",
     "image": "/images/products/catalogue-20261003/robusta-peaberry.webp",
-    "imageAlt": "Robusta Peaberry (Culi) — product photograph supplied by Cai Mep Coffee"
+    "imageAlt": "Robusta Peaberry (Culi) — product photograph supplied by Cai Mep Coffee",
+    "moisture": "≤ 12.5%",
+    "foreignMatter": "≤ 0.5%",
+    "packing": "60kg jute bags",
+    "process": "Dry Processed"
   },
   {
     "id": "coffee-09",
@@ -166,17 +168,16 @@ export const products: Product[] = [
     "category": "Green Coffee Beans",
     "species": "Robusta",
     "quality": "Fine Robusta",
-    "process": "Natural",
     "name": "Fine Robusta Natural",
     "shortDescription": "Hand-sorted Robusta dried with the cherry skin on, held to a tighter defect standard than the commercial grades for roasters building a quality Robusta line.",
     "description": "",
     "flavorNotes": "sweet, fruit-forward, full body.",
     "gallery": [],
-    "moisture": "≤ 12.5%",
-    "foreignMatter": "≤ 0.1%*",
-    "packing": "60kg jute bags, or GrainPro liner on request",
     "image": "/images/products/catalogue-20261003/fine-robusta-natural.webp",
-    "imageAlt": "Fine Robusta Natural — product photograph supplied by Cai Mep Coffee"
+    "imageAlt": "Fine Robusta Natural — product photograph supplied by Cai Mep Coffee",
+    "moisture": "≤ 12%",
+    "packing": "60kg jute bags, or GrainPro liner on request",
+    "process": "Natural Processed"
   },
   {
     "id": "coffee-10",
@@ -186,17 +187,16 @@ export const products: Product[] = [
     "category": "Green Coffee Beans",
     "species": "Robusta",
     "quality": "Fine Robusta",
-    "process": "Honey",
     "name": "Fine Robusta Honey",
-    "shortDescription": "Part of the mucilage stays on the bean during drying, adding a sweetness most standard Robusta doesn't have — aimed at specialty buyers looking past washed and natural.",
+    "shortDescription": "Part of the mucilage stays on the bean during drying, adding a sweetness most standard Robusta doesn't have - aimed at specialty buyers looking past washed and natural.",
     "description": "",
     "flavorNotes": "honeyed, dried fruit, full body.",
     "gallery": [],
-    "moisture": "≤ 12.5%",
-    "foreignMatter": "≤ 0.1%*",
-    "packing": "60kg jute bags, or GrainPro liner on request",
     "image": "/images/products/catalogue-20261003/fine-robusta-honey.webp",
-    "imageAlt": "Fine Robusta Honey — product photograph supplied by Cai Mep Coffee"
+    "imageAlt": "Fine Robusta Honey — product photograph supplied by Cai Mep Coffee",
+    "moisture": "≤ 12%",
+    "packing": "60kg jute bags, or GrainPro liner on request",
+    "process": "Honey Processed"
   },
   {
     "id": "coffee-11",
@@ -207,17 +207,17 @@ export const products: Product[] = [
     "species": "Arabica",
     "grade": "G1",
     "screen": "S18",
-    "process": "Washed",
     "name": "Arabica G1 S18 Washed",
     "shortDescription": "Large, fully washed beans — the grade most specialty and premium commercial roasters default to for a clean cup.",
     "description": "",
     "flavorNotes": "bright acidity, clean, light fruit.",
     "gallery": [],
+    "image": "/images/products/catalogue-20261003/arabica-g1-s18-washed.webp",
+    "imageAlt": "Arabica G1 S18 Washed — product photograph supplied by Cai Mep Coffee",
     "moisture": "≤ 12.5%",
     "foreignMatter": "≤ 0.1%",
     "packing": "60kg jute bags",
-    "image": "/images/products/catalogue-20261003/arabica-g1-s18-washed.webp",
-    "imageAlt": "Arabica G1 S18 Washed — product photograph supplied by Cai Mep Coffee"
+    "process": "Fully washed"
   },
   {
     "id": "coffee-12",
@@ -228,38 +228,17 @@ export const products: Product[] = [
     "species": "Arabica",
     "grade": "G1",
     "screen": "S16",
-    "process": "Washed",
     "name": "Arabica G1 S16 Washed",
     "shortDescription": "The same washed process as the S18 grade, in a smaller bean for roasters who don't need maximum screen size.",
     "description": "",
-    "flavorNotes": "bright, balanced acidity.",
+    "flavorNotes": "bright acidity, clean, light fruit.",
     "gallery": [],
+    "image": "/images/products/catalogue-20261003/arabica-g1-s16-washed.webp",
+    "imageAlt": "Arabica G1 S16 Washed — product photograph supplied by Cai Mep Coffee",
     "moisture": "≤ 12.5%",
     "foreignMatter": "≤ 0.1%",
     "packing": "60kg jute bags",
-    "image": "/images/products/catalogue-20261003/arabica-g1-s16-washed.webp",
-    "imageAlt": "Arabica G1 S16 Washed — product photograph supplied by Cai Mep Coffee"
-  },
-  {
-    "id": "coffee-13",
-    "origin": "Vietnam",
-    "featured": false,
-    "slug": "arabica-g1-s18-natural",
-    "category": "Green Coffee Beans",
-    "species": "Arabica",
-    "grade": "G1",
-    "screen": "S18",
-    "process": "Natural",
-    "name": "Arabica G1 S18 Natural",
-    "shortDescription": "Cherries dried whole instead of pulped first, which brings more sweetness and body than the washed lots — a common request from roasters chasing fruit-forward profiles.",
-    "description": "",
-    "flavorNotes": "fruity, winey, syrupy sweetness.",
-    "gallery": [],
-    "moisture": "≤ 12.5%",
-    "foreignMatter": "≤ 0.2%",
-    "packing": "60kg jute bags",
-    "image": "/images/products/catalogue-20261003/arabica-g1-s18-natural.webp",
-    "imageAlt": "Arabica G1 S18 Natural — product photograph supplied by Cai Mep Coffee"
+    "process": "Fully washed"
   },
   {
     "id": "coffee-14",
@@ -273,13 +252,14 @@ export const products: Product[] = [
     "name": "Arabica G2 S13–14",
     "shortDescription": "The commercial-grade Arabica most buyers reach for when price matters more than bean size or sorting.",
     "description": "",
-    "flavorNotes": "mild acidity, smooth, easy-drinking.",
+    "flavorNotes": "low acidity, soft, easy-drinking.",
     "gallery": [],
+    "image": "/images/products/catalogue-20261003/arabica-g2-s13-14.webp",
+    "imageAlt": "Arabica G2 S13–14 — product photograph supplied by Cai Mep Coffee",
     "moisture": "≤ 13%",
     "foreignMatter": "≤ 1.0%",
     "packing": "60kg jute bags",
-    "image": "/images/products/catalogue-20261003/arabica-g2-s13-14.webp",
-    "imageAlt": "Arabica G2 S13–14 — product photograph supplied by Cai Mep Coffee"
+    "process": "Washed"
   },
   {
     "id": "coffee-15",
@@ -288,18 +268,18 @@ export const products: Product[] = [
     "slug": "arabica-catimor-washed",
     "category": "Green Coffee Beans",
     "species": "Arabica",
-    "variety": "Catimor",
-    "process": "Washed",
     "name": "Arabica Catimor Washed",
     "shortDescription": "Catimor is the high-yield cultivar grown across Vietnam's Arabica regions, washed here for a straightforward, reliable cup.",
     "description": "",
     "flavorNotes": "mild acidity, light body, clean finish.",
     "gallery": [],
-    "moisture": "≤ 12.5%",
-    "foreignMatter": "≤ 0.1%",
-    "packing": "60kg jute bags",
     "image": "/images/products/catalogue-20261003/arabica-catimor-washed.webp",
-    "imageAlt": "Arabica Catimor Washed — product photograph supplied by Cai Mep Coffee"
+    "imageAlt": "Arabica Catimor Washed — product photograph supplied by Cai Mep Coffee",
+    "moisture": "≤ 12.5%",
+    "foreignMatter": "≤ 0.2%",
+    "packing": "60kg jute bags",
+    "variety": "Catimor",
+    "process": "Fully washed"
   },
   {
     "id": "coffee-17",
@@ -308,18 +288,18 @@ export const products: Product[] = [
     "slug": "arabica-moka",
     "category": "Green Coffee Beans",
     "species": "Arabica",
-    "variety": "Moka",
     "name": "Arabica Moka Washed",
     "shortDescription": "A rare heirloom variety grown in small volume in Vietnam's highlands, washed here and offered mainly as a micro-lot for specialty buyers.",
     "description": "",
     "flavorNotes": "delicate, floral, subtly sweet.",
     "gallery": [],
-    "process": "Washed",
-    "moisture": "≤ 12.5%*",
-    "foreignMatter": "≤ 0.2%*",
-    "packing": "30kg or 60kg bags, GrainPro liner recommended",
     "image": "/images/products/catalogue-20261003/arabica-moka.webp",
-    "imageAlt": "Arabica Moka Washed — product photograph supplied by Cai Mep Coffee"
+    "imageAlt": "Arabica Moka Washed — product photograph supplied by Cai Mep Coffee",
+    "moisture": "≤ 12.5%",
+    "foreignMatter": "≤ 0.1%",
+    "packing": "30kg or 60kg bags, GrainPro liner recommended",
+    "variety": "Moka (heirloom, low yield)",
+    "process": "Fully washed"
   },
   {
     "id": "coffee-19",
@@ -330,17 +310,16 @@ export const products: Product[] = [
     "species": "Excelsa",
     "grade": "G1",
     "screen": "S16",
-    "process": "Clean",
     "name": "Excelsa G1 S16 Clean",
     "shortDescription": "A separate coffee species altogether, grown in small volume in Vietnam. Buyers use it for single-origin specialty offers or to add complexity to a blend.",
     "description": "",
     "flavorNotes": "tart, fruity, unlike either Robusta or Arabica.",
     "gallery": [],
-    "moisture": "≤ 13%",
-    "foreignMatter": "≤ 0.2%*",
-    "packing": "60kg jute bags",
     "image": "/images/products/catalogue-20261003/excelsa-g1-s16-clean.webp",
-    "imageAlt": "Excelsa G1 S16 Clean — product photograph supplied by Cai Mep Coffee"
+    "imageAlt": "Excelsa G1 S16 Clean — product photograph supplied by Cai Mep Coffee",
+    "moisture": "≤ 12.5%",
+    "foreignMatter": "≤ 0.5%",
+    "packing": "60kg jute bags"
   },
   {
     "id": "coffee-21",
@@ -354,11 +333,11 @@ export const products: Product[] = [
     "description": "",
     "flavorNotes": "bold, bitter-chocolate, heavy body.",
     "gallery": [],
-    "moisture": "≤ 5%*",
-    "roastLevel": "Light / Medium / Dark — customizable",
-    "packing": "Valve-sealed bags, custom weight",
     "image": "/images/products/catalogue-20261003/roasted-robusta.webp",
-    "imageAlt": "Roasted Robusta — product photograph supplied by Cai Mep Coffee"
+    "imageAlt": "Roasted Robusta — product photograph supplied by Cai Mep Coffee",
+    "packing": "Valve-sealed bags, custom weight",
+    "roastLevel": "Light / Medium / Dark — customizable",
+    "process": "Natural / Honey"
   },
   {
     "id": "coffee-22",
@@ -370,13 +349,13 @@ export const products: Product[] = [
     "name": "Roasted Arabica",
     "shortDescription": "Whole bean, roasted to order — the straightforward choice for buyers wanting a finished product with Vietnamese Arabica's cleaner character.",
     "description": "",
-    "flavorNotes": "balanced acidity, light-medium body.",
+    "flavorNotes": "balanced acidity, light sour, little bitter.",
     "gallery": [],
-    "moisture": "≤ 5%*",
-    "roastLevel": "Light / Medium / Dark — customizable",
-    "packing": "Valve-sealed bags, custom weight",
     "image": "/images/products/catalogue-20261003/roasted-arabica.webp",
-    "imageAlt": "Roasted Arabica — product photograph supplied by Cai Mep Coffee"
+    "imageAlt": "Roasted Arabica — product photograph supplied by Cai Mep Coffee",
+    "packing": "Valve-sealed bags, custom weight",
+    "roastLevel": "Light / Medium / Dark — customizable",
+    "process": "Washed"
   },
   {
     "id": "coffee-23",
@@ -390,28 +369,10 @@ export const products: Product[] = [
     "description": "",
     "flavorNotes": "tart, fruity, complex.",
     "gallery": [],
-    "moisture": "≤ 5%*",
-    "roastLevel": "Medium — recommended to preserve varietal character",
-    "packing": "Valve-sealed bags, custom weight",
     "image": "/images/products/catalogue-20261003/roasted-excelsa.webp",
-    "imageAlt": "Roasted Excelsa — product photograph supplied by Cai Mep Coffee"
-  },
-  {
-    "id": "coffee-24",
-    "origin": "Vietnam",
-    "featured": false,
-    "slug": "roasted-coffee-blend",
-    "category": "Roasted Coffee Beans",
-    "type": "Blend",
-    "name": "Roasted Coffee Blend",
-    "shortDescription": "Robusta, Arabica, and Excelsa combined to the buyer's recipe — built for private-label buyers who want a signature blend without managing green sourcing themselves.",
-    "description": "",
-    "flavorNotes": "set by the buyer's chosen ratio.",
-    "gallery": [],
-    "moisture": "≤ 5%*",
+    "imageAlt": "Roasted Excelsa — product photograph supplied by Cai Mep Coffee",
     "packing": "Valve-sealed bags, custom weight",
-    "image": "/images/products/catalogue-20261003/roasted-coffee-blend.webp",
-    "imageAlt": "Roasted Coffee Blend — product photograph supplied by Cai Mep Coffee"
+    "roastLevel": "Light / Medium / Dark — customizable"
   },
   {
     "id": "coffee-25",
@@ -425,11 +386,11 @@ export const products: Product[] = [
     "description": "",
     "flavorNotes": "bold, bitter-chocolate, heavy body.",
     "gallery": [],
-    "moisture": "≤ 5%*",
-    "grindSize": "Fine (espresso) / Medium (filter) / Coarse (French press) — per order",
-    "packing": "Airtight, moisture-barrier bags",
     "image": "/images/products/catalogue-20261003/ground-robusta.webp",
-    "imageAlt": "Ground Robusta — product photograph supplied by Cai Mep Coffee"
+    "imageAlt": "Ground Robusta — product photograph supplied by Cai Mep Coffee",
+    "moisture": "≤ 5%*",
+    "packing": "Airtight, moisture-barrier bags",
+    "grindSize": "Fine (espresso) / Medium (filter) / Coarse (French press) — per order"
   },
   {
     "id": "coffee-26",
@@ -441,13 +402,13 @@ export const products: Product[] = [
     "name": "Ground Arabica",
     "shortDescription": "Milled to order, for buyers who need a finished retail or foodservice product rather than whole bean.",
     "description": "",
-    "flavorNotes": "balanced acidity, light-medium body.",
+    "flavorNotes": "balanced acidity, light sour, little bitter.",
     "gallery": [],
-    "moisture": "≤ 5%*",
-    "grindSize": "Fine (espresso) / Medium (filter) / Coarse (French press) — per order",
-    "packing": "Airtight, moisture-barrier bags",
     "image": "/images/products/catalogue-20261003/ground-arabica.webp",
-    "imageAlt": "Ground Arabica — product photograph supplied by Cai Mep Coffee"
+    "imageAlt": "Ground Arabica — product photograph supplied by Cai Mep Coffee",
+    "moisture": "≤ 5%*",
+    "packing": "Airtight, moisture-barrier bags",
+    "grindSize": "Fine (espresso) / Medium (filter) / Coarse (French press) — per order"
   },
   {
     "id": "coffee-27",
@@ -461,11 +422,10 @@ export const products: Product[] = [
     "description": "",
     "flavorNotes": "set by the buyer's chosen ratio.",
     "gallery": [],
-    "moisture": "≤ 5%*",
-    "grindSize": "Fine (espresso) / Medium (filter) / Coarse (French press) — per order",
-    "packing": "Airtight, moisture-barrier bags",
     "image": "/images/products/catalogue-20261003/ground-coffee-blend.webp",
-    "imageAlt": "Ground Coffee Blend — product photograph supplied by Cai Mep Coffee"
+    "imageAlt": "Ground Coffee Blend — product photograph supplied by Cai Mep Coffee",
+    "packing": "Airtight, moisture-barrier bags",
+    "grindSize": "Fine (espresso) / Medium (filter) / Coarse (French press) — per order"
   }
 ];
 export const categories: ProductCategory[] = [

@@ -2,7 +2,7 @@
 import { useQueryParams, replaceQuery } from "@/lib/useQueryParams";
 import { useState } from "react";
 import { Search, SlidersHorizontal, ChevronDown, X } from "lucide-react";
-import { filterProducts, categories } from "@/data/products";
+import { filterProducts, categories, products } from "@/data/products";
 import { ProductGrid } from "./ProductGrid";
 const speciesOptions = ["Robusta", "Arabica", "Excelsa"];
 const filterDefs = [
@@ -15,7 +15,7 @@ const filterDefs = [
   {
     key: "process",
     label: "Processing Method",
-    options: ["Clean", "Wet Polished", "Washed", "Natural", "Honey"],
+    options: [...new Set(products.map(p => p.process).filter((value): value is string => Boolean(value)))],
   },
   { key: "screen", label: "Screen Size", options: ["S18", "S16", "S13-14"] },
 ];
