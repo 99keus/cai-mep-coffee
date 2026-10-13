@@ -2704,7 +2704,8 @@ a[role="button"] {
 
 /* Compact mobile introduction and an icon-only header action. */
 @media (max-width: 760px) {
-  .why-section .why-introduction { min-height: 0; padding-block: 88px; }
+  .why-section .why-introduction { min-height: 0; padding-block: 88px; container-type: inline-size; }
+  .why-statement { font-size: 6.1cqw; }
   .header-action-layer .button.header-quote {
     width: 44px;
     height: 44px;
