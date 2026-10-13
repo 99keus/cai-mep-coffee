@@ -1,4 +1,6 @@
 ---
 deployment:
   tasks:
-    - /bin/bash -c 'cd /home/caimeptr/repositories/cai-mep-coffee && npm ci && npm run build && test -f out/index.html && /bin/mkdir -p /home/caimeptr/public_html && /bin/cp -R out/. /home/caimeptr/public_html/'
+    - export DEPLOYPATH=/home/caimeptr/public_html/
+    - /bin/mkdir -p "$DEPLOYPATH"
+    - /bin/cp -R /home/caimeptr/repositories/cai-mep-coffee/out/. "$DEPLOYPATH"s
